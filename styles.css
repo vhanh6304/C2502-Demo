@@ -183,3 +183,123 @@ body {
     border-radius: 4px; /* More rectangular for active dot */
     background-color: #000;
 }
+
+.nft-collections {
+    display: flex;
+    justify-content: space-between; /* Positions items to start and end */
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto; /* Centers the section on the page */
+    padding: 20px 50px; /* Adds some internal spacing, adjust as needed */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Optional: for consistency with header */
+}
+
+.collection-header-text h2 {
+    margin-top: 0;
+    margin-bottom: 5px; /* Space between title and subtitle */
+    font-size: 1.8em; /* Adjust as needed */
+    color: #000;
+}
+
+.collection-header-text p {
+    margin: 0;
+    font-size: 1em; /* Adjust as needed */
+    color: #555;
+}
+
+.nft-collections .collection-buttons {
+    /* Original flex properties are not strictly needed if it's just one button */
+    /* Padding removed as parent align-items: center handles vertical alignment */
+}
+
+.nft-collections .collection-buttons .view-btn {
+    padding: 10px 25px; /* Adjusted padding */
+    border: 1px solid #ccc; /* Example: give it a border */
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.nft-collections .collection-buttons .view-btn:hover {
+    /* Keeping existing hover, or adjust if needed */
+    background-color: #000;
+    color: #fff;
+    border-color: #000; /* Match background on hover */
+}
+
+.production-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center rows of cards if they don't fill width */
+    max-width: 1200px; /* Match other main content sections */
+    margin: 50px auto; /* Center the grid */
+    padding: 0 20px; /* Optional: padding for the grid container itself */
+    box-sizing: border-box;
+}
+
+.production-items {
+    /* This is each card in the grid */
+    width: 304px; /* Fixed width as requested */
+    height: 513px; /* Fixed height as requested */
+    flex-shrink: 0; /* Prevent shrinking if container is too narrow */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Rounded corners as requested */
+    background-color: #fff;
+    padding: 16px; /* Padding inside the card as requested */
+    display: flex; /* To manage the layout of its child '.item' */
+    flex-direction: column; /* Stack content vertically if needed, or center .item */
+}
+
+.item { /* Styles for the content wrapper inside each card */
+    display: flex;
+    flex-direction: column; /* Stack image, info, and button vertically */
+    align-items: flex-start; /* Align items to the start (left) of the flex container */
+    gap: 10px; /* Internal gap between elements in the card as requested */
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Take full width of parent .production-items padding box */
+    height: 100%; /* Allow item to fill card height, useful for button alignment */
+}
+
+.item img {
+    max-width: 100%; /* CRITICAL: Prevents image from overflowing card width */
+    /* height: auto; */ /* Option 1: Maintain aspect ratio, height adjusts */
+    height: 250px; /* Option 2: Fixed height for image area, adjust as needed for your 513px card */
+    object-fit: cover; /* Ensures image covers the area, might crop */
+    border-radius: 4px; /* Rounded corners for image */
+    /* margin-bottom: 10px; */ /* Removed, using gap on .item now */
+}
+
+.item .item-info {
+    width: 100%; /* Ensure item-info takes full width for left alignment of its content */
+    /* margin-bottom: 15px; */ /* Removed, using gap on .item now */
+}
+
+.item .item-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+.item .item-info .user-name {
+    font-weight: bold; /* Optional: make username bold */
+    margin: 0; /* Reset margin if needed due to parent flex */
+}
+
+.item .viewc-btn, .item button { /* Style all buttons within .item consistently */
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: auto; /* Pushes button to the bottom of the card if card heights vary and .item fills height */
+}
+
+.item .viewc-btn:hover, .item button:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+}
