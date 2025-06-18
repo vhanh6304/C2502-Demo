@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f8f8f8;
+    background-color: #fff;
     color: #333;
 }
 
@@ -107,7 +107,8 @@ body {
 
 .main-content .text-section {
     flex: 1;
-    max-width: 500px;
+    max-width: 532px;
+    max-height: 234px;
 }
 
 .main-content .text-section h1 {
@@ -158,10 +159,11 @@ body {
 }
 
 .main-content .image-section img {
-    max-width: 100%;
-    height: auto;
+    width: 590px;
+    height: 590px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 
 .image-dots {
@@ -232,10 +234,10 @@ body {
 .production-grid {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 20px; /* Space between items */
+    gap: 32px; /* Space between items */
     justify-content: center; /* Center rows of cards if they don't fill width */
-    max-width: 1200px; /* Match other main content sections */
-    margin: 50px auto; /* Center the grid */
+    max-width: 1600px; /* Match other main content sections */
+    margin: 0px auto; /* Center the grid */
     padding: 0 20px; /* Optional: padding for the grid container itself */
     box-sizing: border-box;
 }
@@ -265,10 +267,9 @@ body {
 }
 
 .item img {
-    max-width: 100%; /* CRITICAL: Prevents image from overflowing card width */
-    /* height: auto; */ /* Option 1: Maintain aspect ratio, height adjusts */
-    height: 250px; /* Option 2: Fixed height for image area, adjust as needed for your 513px card */
-    object-fit: cover; /* Ensures image covers the area, might crop */
+    width: 272px; /* CRITICAL: Prevents image from overflowing card width */
+    height: 300px; /* Option 2: Fixed height for image area, adjust as needed for your 513px card */
+    object-fit: cover;
     border-radius: 4px; /* Rounded corners for image */
     /* margin-bottom: 10px; */ /* Removed, using gap on .item now */
 }
@@ -278,11 +279,20 @@ body {
     /* margin-bottom: 15px; */ /* Removed, using gap on .item now */
 }
 
-.item .item-info p {
-    margin: 5px 0;
-    font-size: 0.9em;
-    color: #555;
+.item .item-info .user-info {
+    display: flex;
+    align-items: center; /* Aligns avatar and text vertically */
+    gap: 10px; /* Space between avatar and text */
+    margin-bottom: 10px; /* Space below user info */
 }
+
+.item .item-info img {
+    width: 40px; /* Fixed width for user avatar */
+    height: 40px; /* Fixed height for user avatar */
+    border-radius: 50%; /* Circular avatar */
+    object-fit: cover;
+}
+
 .item .item-info .user-name {
     font-weight: bold; /* Optional: make username bold */
     margin: 0; /* Reset margin if needed due to parent flex */
@@ -290,13 +300,22 @@ body {
 
 .item .viewc-btn, .item button { /* Style all buttons within .item consistently */
     padding: 10px 20px;
+    width: 272px;
+    height: 56px;
     border: 1px solid #ccc;
-    border-radius: 20px;
-    background-color: #f5f5f5;
+    border-radius: 10px;
+    align-self: center;
+    margin: 0;
+    background-color: #fff;
     color: #333;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 900;
     margin-top: auto; /* Pushes button to the bottom of the card if card heights vary and .item fills height */
+}
+
+.item .item-info .collection-name {
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 .item .viewc-btn:hover, .item button:hover {
