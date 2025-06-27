@@ -210,11 +210,6 @@ body {
     color: #555;
 }
 
-.nft-collections .collection-buttons {
-    /* Original flex properties are not strictly needed if it's just one button */
-    /* Padding removed as parent align-items: center handles vertical alignment */
-}
-
 .nft-collections .collection-buttons .view-btn {
     padding: 10px 25px; /* Adjusted padding */
     border: 1px solid #ccc; /* Example: give it a border */
