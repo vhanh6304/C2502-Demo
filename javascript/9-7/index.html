@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <style>
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+
+    <body>
+        <button id="countBtn">Click tôi</button>
+        <p id="result">Số lần: 0</p>
+
+        <button id="saveBtn">Save user</button>
+        <button id="deleteBtn">Delete user</button>
+        <p></p>
+
+        <input type="text" id="taskInput" placeholder="Nhập công việc" />
+        <button onclick="addTask()">add</button>
+        <ul id="taskList"></ul>
+        <p></p>
+
+        <button onclick="toggleLightDark()">Toggle Light/Dark Mode</button>
+
+        <script src="script.js"></script>
+    </body>
+</html>
