@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý danh mục</title>
+</head>
+<body>
+    <a href="danhmuc.html">Quản lý danh mục</a>
+    <a href="sanpham.html">Quản lý sản phẩm</a>
+    <form id="category-form">
+        <input type="text" placeholder="Tên danh mục" id="category-name" required>
+        <input type="number" placeholder="Số lượng" id="category-number" required>
+    </form>
+
+    <h2>Danh sách danh mục</h2>
+    <table class="categoryTable">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên danh mục</th>
+                <th>Số lượng</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="categoryTableBody"></tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

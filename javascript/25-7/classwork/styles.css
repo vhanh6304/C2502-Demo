@@ -1,0 +1,70 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #fdfdfd;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #333;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+form label {
+  display: block;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+button.edit {
+  background: #ffd700;
+}
+
+button.delete {
+  background: #ff4d4d;
+  color: white;
+}
+
+.gender-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.gender-group label {
+  margin: 0;
+}

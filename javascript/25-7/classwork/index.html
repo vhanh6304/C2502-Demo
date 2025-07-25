@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý nhân viên</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Quản lý nhân viên</h1>
+
+  <form id="employeeForm">
+    <input type="hidden" id="employeeId">
+
+    <label>Họ tên:
+      <input type="text" id="name" maxlength="255" required>
+    </label>
+
+    <label>Tuổi:
+      <input type="number" id="age" min="18" max="65" required>
+    </label>
+
+    <div class="gender-group">
+        <label>Giới tính:</label>
+        <div class="gender-check">
+            <input type="radio" id="male" name="gender" value="Nam" class="form-check-input" required>
+            <label class="form-check-label" for="male">Nam</label>
+        </div>
+        <div class="gender-check">
+            <input type="radio" id="female" name="gender" value="Nữ" class="form-check-input" required>
+            <label class="form-check-label" for="female">Nữ</label>
+        </div>
+    </div>
+
+
+    <label>Vị trí:
+      <select id="position" required>
+        <option value="">--Chọn vị trí--</option>
+        <option value="Kế toán">Kế toán</option>
+        <option value="Lập trình viên">Lập trình viên</option>
+        <option value="Quản lý">Quản lý</option>
+      </select>
+    </label>
+
+    <label>Ghi chú:
+      <textarea id="note" maxlength="300"></textarea>
+    </label>
+
+    <button type="submit">Lưu nhân viên</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <h2>Danh sách nhân viên</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Mã NV</th>
+        <th>Họ tên</th>
+        <th>Tuổi</th>
+        <th>Giới tính</th>
+        <th>Vị trí</th>
+        <th>Ghi chú</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+    <tbody id="employeeTable"></tbody>
+  </table>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

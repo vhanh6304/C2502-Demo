@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+</head>
+<body>
+    <a href="danhmuc.html">Quản lý danh mục</a>
+    <a href="sanpham.html">Quản lý sản phẩm</a>
+    <form id="productForm">
+        <input type="text" placeholder="Tên sản phẩm" id="productName" name="productName" required>
+        <input type="number" placeholder="Giá" id="productPrice" name="productPrice" required>
+        <select id="productCategory" name="productCategory" required>
+            <option value="">Chọn danh mục</option>
+        </select>
+        <input type="text" placeholder="Mô tả" id="productDescription" name="productDescription" required>
+        <button id="addProduct">Thêm sản phẩm</button>
+    </form>
+
+    <h2>Danh sách sản phẩm</h2>
+    <table class="productTable">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Danh mục</th>
+                <th>Mô tả</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="productTableBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
