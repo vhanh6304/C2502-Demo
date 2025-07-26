@@ -17,7 +17,6 @@ form.addEventListener('submit', function (e) {
   if (!name || !age || !gender || !position) return;
 
   if (idInput.value) {
-    // Edit
     const id = parseInt(idInput.value);
     const emp = employees.find(emp => emp.id === id);
     if (emp) {
